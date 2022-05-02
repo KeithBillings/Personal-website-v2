@@ -5,3 +5,6 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+// This component wraps around the other page components 
+// Here you can add layouts, global styles, etc
