@@ -21,12 +21,12 @@ export default function Navbar() {
 				</Link>
 
 				<div className="dropdown">
-					<p className="title menu-item" onClick={handleClick} ref={dropdownTitle}>
-						<span>Portfolio</span>
+					<div className="title" onClick={handleClick} ref={dropdownTitle}>
+						<p className="menu-item">Portfolio</p>
 						<svg height={10} width={10}>
 							<polygon points="5,10 0,0 10,0" fill="rgba(255,255,255,.5)" />
 						</svg>
-					</p>
+					</div>
 
 					<div className="dropdown-menu" ref={dropdownMenu}>
 						<Link href={"/portfolio/webdevelopment"}>

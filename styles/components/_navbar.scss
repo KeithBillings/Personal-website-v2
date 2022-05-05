@@ -5,6 +5,7 @@
 	font-weight: 100;
 
 	.logo {
+		pointer-events: none;
 	}
 
 	.menu {
@@ -15,6 +16,7 @@
 		.menu-item {
 			padding: 0.4rem;
 			transition: all 0.2s;
+			display: inline-block;
 
 			&:hover {
 				cursor: pointer;
