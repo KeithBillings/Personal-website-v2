@@ -1,0 +1,8 @@
+.layout {
+	background-image: linear-gradient($black-5, $black-5), url("../../public/cherry-blossoms.jpg");
+	background-size: cover;
+	background-position: top center;
+
+	min-height: 100vh;
+	color: $white-10;
+}

@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html,
+body {
+	box-sizing: border-box;
+}
+
+html {
+	// This defines what 1rem is
+	font-size: 62.5%; //1 rem = 10px
+}
+
+// abstracts
+@import "abstracts/animations";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// base
+@import "base/typography";
+
+// components
+@import "components/sample-component";
+@import "components/navbar";
+
+// layout
+@import "layout/layout";
+
+// pages
+@import "pages/about";
+@import "pages/home";
+@import "pages/portfolio";

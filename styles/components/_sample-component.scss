@@ -1,0 +1,11 @@
+.sample-component {
+	background-color: green;
+
+	@include tablet(){
+		background-color: orange;
+	}
+
+	@include mobile(){
+		background-color: red;
+	}
+}
