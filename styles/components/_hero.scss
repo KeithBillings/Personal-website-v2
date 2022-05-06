@@ -1,0 +1,52 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	height: calc(100vh - 8.7rem);
+	align-items: center;
+	position: relative;
+
+	&__card {
+		margin: auto;
+		padding-bottom: 8.7rem;
+	}
+
+	&__title {
+		font-size: 8rem;
+		text-align: center;
+	}
+
+	&__carousel {
+		font-size: 2rem;
+		display: flex;
+		width: 20rem;
+		margin: auto;
+		justify-content: center;
+		position: relative;
+
+		&__item {
+			position: absolute;
+			text-align: center;
+
+			transform: translateY(4rem);
+			transition: all 1s;
+			opacity: 0;
+
+			&--active {
+				opacity: 1;
+				transform: translateY(0rem);
+			}
+		}
+	}
+
+	&__scroll-down {
+		position: absolute;
+		bottom: 2rem;
+		transition: all 0.3s;
+
+		&:hover {
+			transform: translateY(0.5rem);
+			cursor: pointer;
+		}
+	}
+}

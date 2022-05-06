@@ -59,6 +59,11 @@ export default function Home() {
 					</svg>
 				</div>
 			</div>
+			<div className="example-cards">
+				<div className="card"></div>
+				<div className="card"></div>
+				<div className="card"></div>
+			</div>
 		</div>
 	);
 }

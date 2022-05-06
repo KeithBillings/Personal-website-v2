@@ -2,7 +2,10 @@
 	background-image: linear-gradient($black-5, $black-5), url("../../public/cherry-blossoms.jpg");
 	background-size: cover;
 	background-position: top center;
+	background-attachment: fixed;
 
-	min-height: 100vh;
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	color: $white-10;
 }

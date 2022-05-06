@@ -1,7 +1,7 @@
 .navbar {
 	display: flex;
 	font-size: 1.5rem;
-	padding: 1rem;
+	padding: 3rem;
 	font-weight: 100;
 
 	.logo {
@@ -12,6 +12,7 @@
 		display: flex;
 		margin-left: auto;
 		gap: 2rem;
+		// padding-right: 1rem;
 
 		.menu-item {
 			padding: 0.4rem;
@@ -25,6 +26,8 @@
 		}
 
 		.dropdown {
+			position: relative;
+
 			.title {
 				span {
 					margin-right: 0.5rem;

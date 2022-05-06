@@ -1,53 +1,18 @@
 .home-page {
 	display: flex;
+	flex-direction: column;
 
-	.hero {
-		display: flex;
-		flex-direction: column;
-		margin: auto;
-		height: calc(100vh - 47px);
-		align-items: center;
+	.example-cards {
+		background-color: rgba(255, 255, 255, 0.7);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
 
-		&__card {
-			margin: auto;
-		}
-
-		&__title {
-			font-size: 8rem;
-			text-align: center;
-		}
-
-		&__carousel {
-			font-size: 2rem;
-			display: flex;
-			width: 18rem;
-			margin: auto;
-			justify-content: center;
-
-			&__item {
-				position: absolute;
-				text-align: center;
-
-				transform: translateY(4rem);
-				transition: all 1s;
-				opacity: 0;
-
-				&--active {
-					opacity: 1;
-					transform: translateY(0rem);
-				}
-			}
-		}
-
-		&__scroll-down {
-			position: absolute;
-			bottom: 2rem;
-			transition: all 0.3s;
-
-			&:hover {
-				transform: translateY(0.5rem);
-				cursor: pointer;
-			}
+		.card {
+			height: 100px;
+			width: 100px;
+			background-color: lightslategray;
+			margin: 30px;
 		}
 	}
 }
