@@ -1,69 +1,14 @@
-import { useState, useEffect, useRef, useMemo } from "react";
+import Hero from "../components/Hero";
+import NavCards from "../components/NavCards";
 
 export default function Home() {
-	const [carouselSlide, setCarouselSlide] = useState(0);
-
-	const slide1 = useRef(null);
-	const slide2 = useRef(null);
-	const slide3 = useRef(null);
-	const slide4 = useRef(null);
-
-	const allSlides = useMemo(() => [slide1, slide2, slide3, slide4], []);
-
-	useEffect(() => {
-		allSlides.map((slide, index) => {
-			if (index === carouselSlide) {
-				slide.current.classList.add("hero__carousel__item--active");
-			} else {
-				slide.current.classList.remove("hero__carousel__item--active");
-			}
-		});
-	}, [allSlides, carouselSlide]);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCarouselSlide((slide) => {
-				if (slide < allSlides.length - 1) {
-					return slide + 1;
-				} else {
-					return (slide = 0);
-				}
-			});
-		}, 5000);
-		return () => clearInterval(interval);
-	}, []);
-
 	return (
 		<div className="home-page">
-			<div className="hero">
-				<div className="hero__card">
-					<h1 className="hero__title">Keith Billings</h1>
-					<div className="hero__carousel">
-						<p className="hero__carousel__item" ref={slide1}>
-							Web Development
-						</p>
-						<p className="hero__carousel__item" ref={slide2}>
-							Photography
-						</p>
-						<p className="hero__carousel__item" ref={slide3}>
-							Software Engineering
-						</p>
-						<p className="hero__carousel__item" ref={slide4}>
-							Consulting
-						</p>
-					</div>
-				</div>
-				<div className="hero__scroll-down">
-					<svg height={15} width={15}>
-						<polygon points="7.5,15 0,0 15,0" fill="rgba(255,255,255,.5)" />
-					</svg>
-				</div>
-			</div>
-			<div className="example-cards">
-				<div className="card"></div>
-				<div className="card"></div>
-				<div className="card"></div>
-			</div>
+			<Hero />
+			<NavCards />
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur impedit, nemo unde ipsa, dolorum ex illo autem porro quo earum laborum nam atque. Laudantium unde dolorum facilis fugiat. Omnis cum sapiente nesciunt impedit sequi at? Tempora maxime nulla pariatur dolores dolorum obcaecati ad debitis accusamus fuga officia perspiciatis, repellendus ex necessitatibus deserunt ea optio quis sed nisi vel, praesentium unde consequatur tempore totam? Ipsum rem, deserunt hic unde ducimus, obcaecati natus nostrum dolorem aspernatur temporibus dolor tempore minima aliquid earum aut, molestiae voluptatum. Suscipit, aut facere? Eveniet distinctio voluptate consequuntur possimus ratione quasi. Vero qui consequatur odio explicabo. Fugit quo ex adipisci at inventore porro blanditiis, assumenda quos suscipit, nemo neque animi pariatur illum, esse ad dolorem odit autem. Eveniet animi exercitationem perspiciatis totam provident, voluptatem itaque dignissimos tempore quas facilis possimus debitis aliquam facere, libero esse aut ipsam commodi, eos sunt dolorum maiores odio? Voluptatum officiis aspernatur in dignissimos laborum beatae commodi ea inventore placeat corrupti ratione maxime totam ipsa nobis deleniti consequuntur pariatur facilis eligendi animi neque, magni architecto nihil nostrum perferendis. Id est vitae minima reprehenderit architecto quisquam deserunt provident hic similique? Itaque eaque, velit alias sint impedit odio iusto accusamus aut perspiciatis cupiditate ipsa id quasi, soluta est nihil ad commodi ipsum suscipit esse veniam! Maiores voluptate consequatur iusto? Officiis libero ratione vel dolore voluptas voluptates voluptatibus quis nisi nulla totam aliquam, assumenda labore commodi quae, obcaecati dicta porro, sint nostrum sapiente aliquid deserunt eveniet neque alias corrupti. Eligendi voluptas libero, odit vitae distinctio eveniet, eum error accusantium quod laborum corrupti. Nam minus quis molestiae pariatur perspiciatis tempore quasi incidunt ducimus. Placeat consectetur facilis, cupiditate, recusandae veniam in veritatis quidem eius nostrum nemo possimus quae alias modi inventore culpa, ad quos. Nesciunt quas harum alias, in magnam corrupti? Praesentium ducimus vitae facilis est officia eius impedit.
+			</p>
 		</div>
 	);
 }

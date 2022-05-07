@@ -1,0 +1,47 @@
+.nav-card {
+	background-color: $white-9;
+	height: 40rem;
+	width: 100%;
+	margin: 3rem;
+	color: $white-10;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+	&__slides {
+		position: absolute;
+		width: 100%;
+		// overflow: hidden;
+		transform: translateY(-50%);
+
+		div {
+			position: absolute;
+		}
+
+		&__slide {
+			opacity: 0;
+			transition: all 1s;
+
+			&--active {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 2rem;
+	}
+
+	&__content {
+		background-image: linear-gradient($black-5, $black-5);
+		height: 100%;
+
+		z-index: 2;
+		padding: 3rem;
+		font-size: 1.6rem;
+		text-align: justify;
+		position: absolute;
+	}
+}

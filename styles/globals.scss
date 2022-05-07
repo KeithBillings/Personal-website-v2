@@ -4,6 +4,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: inherit;
+	scroll-behavior: smooth;
 }
 
 html,
@@ -28,6 +29,8 @@ html {
 @import "components/hero";
 @import "components/sample-component";
 @import "components/navbar";
+@import "components/nav-card";
+@import "components/nav-cards";
 
 // layout
 @import "layout/layout";

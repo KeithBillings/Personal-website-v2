@@ -1,0 +1,13 @@
+.nav-cards {
+	// background-image: linear-gradient($black-5, $black-5), url("../../public/flower-1.jpg");
+	// background-size: cover;
+	// background-position: top center;
+	// background-attachment: fixed;
+	background-color: $white-9;
+	padding: 0rem 5rem;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	gap: 5rem;
+}
