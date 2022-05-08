@@ -7,14 +7,16 @@ import sampleImage3 from "../public/sample/sample-image-3.jpg";
 export default function NavCards() {
 	const webDevImages = [sampleImage1, sampleImage2, sampleImage3];
 
-	const content =
-		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur impeditsum rem, deserunnima aliquid earum aut, molestiae voluptatum. Suscipit, aut facere? Eveniet distinctio voluptate consequuntur possimus ratione quasi. Vero qui consequatur odio explicabo. Fugit quo ex adipisci at inventore porro blanditiis, assumenda quos suscipit, nemo neque animi pariatur illum, esse ad dolorem odit autem.";
+	const webDevContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit, esse ad dolorem odit autem.";
+	const photographyContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit, esse ad dolorem odit autem.";
+	const aboutMeContent = "Born and raised in Portland, Oregon. Read the journey of Keith Billings. From firefighting, to building maintenance, and now thriving in tech.";
 
 	return (
 		<div className="nav-cards">
-			<NavCard title={"Web Development"} images={webDevImages} content={content} path={"/portfolio/webdevelopment"} buttonText={`Say "Hello" to my "World"`} />
-			<NavCard title={"Photography"} images={webDevImages} content={content} path={"/portfolio/photography"} buttonText={"Peer through the lens"} />
-			<NavCard title={"About Me"} images={webDevImages} content={content} path={"/about"} buttonText={"Learn more"} />
+			<h2 className="nav-cards__title">Categories</h2>
+			<NavCard title={"Web Development"} images={webDevImages} content={webDevContent} path={"/portfolio/webdevelopment"} buttonText={`Say "Hello" to my "World"`} />
+			<NavCard title={"Photography"} images={webDevImages} content={photographyContent} path={"/portfolio/photography"} buttonText={"Peer through the lens"} />
+			<NavCard title={"About Me"} images={webDevImages} content={aboutMeContent} path={"/about"} buttonText={"Learn more"} />
 		</div>
 	);
 }

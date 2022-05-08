@@ -2,9 +2,13 @@
 	display: flex;
 	flex-direction: column;
 	margin: auto;
-	height: calc(100vh - 8.7rem);
+	height: calc(100vh - 8.6rem);
 	align-items: center;
 	position: relative;
+
+	@include mobile() {
+		height: calc(100vh - 6.6rem);
+	}
 
 	&__card {
 		margin: auto;
@@ -14,6 +18,11 @@
 	&__title {
 		font-size: 8rem;
 		text-align: center;
+		transition: all .5s;
+
+		@include mobile() {
+			font-size: 5rem;
+		}
 	}
 
 	&__carousel {

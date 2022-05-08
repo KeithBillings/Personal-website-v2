@@ -27,7 +27,7 @@ export default function NavCard({ title, images, content, path, buttonText }) {
 
 			<div className="nav-card__content">
 				<h2 className="nav-card__title">{title}</h2>
-				<p>{content}</p>
+				<p className="nav-card__content__body">{content}</p>
 				<Link href={path}>
 					<a className="nav-card__link">{buttonText}</a>
 				</Link>
