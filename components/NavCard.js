@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function NavCard({ title, images, content }) {
+export default function NavCard({ title, images, content, path, buttonText }) {
 	const [activeSlide, setActiveSlide] = useState(1);
 
 	useEffect(() => {
@@ -27,6 +28,9 @@ export default function NavCard({ title, images, content }) {
 			<div className="nav-card__content">
 				<h2 className="nav-card__title">{title}</h2>
 				<p>{content}</p>
+				<Link href={path}>
+					<a className="nav-card__link">{buttonText}</a>
+				</Link>
 			</div>
 		</div>
 	);
