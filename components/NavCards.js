@@ -1,8 +1,8 @@
 import NavCard from "./NavCard";
 
-import sampleImage1 from "../public/sample/sample-image-1.jpg";
-import sampleImage2 from "../public/sample/sample-image-2.jpg";
-import sampleImage3 from "../public/sample/sample-image-3.jpg";
+import sampleImage1 from "../public/sample/sample-image-4.jpg";
+import sampleImage2 from "../public/sample/sample-image-5.jpg";
+import sampleImage3 from "../public/sample/sample-image-6.jpg";
 
 export default function NavCards() {
 	const webDevImages = [sampleImage1, sampleImage2, sampleImage3];
