@@ -1,11 +1,9 @@
 import NavCard from "./NavCard";
 
-import sampleImage1 from "../public/sample/sample-image-4.jpg";
-import sampleImage2 from "../public/sample/sample-image-5.jpg";
-import sampleImage3 from "../public/sample/sample-image-6.jpg";
+import sampleImage1 from "../public/images/fullsize/cherry-blossoms.jpg";
 
 export default function NavCards() {
-	const webDevImages = [sampleImage1, sampleImage2, sampleImage3];
+	const webDevImages = [sampleImage1, sampleImage1, sampleImage1];
 
 	const webDevContent = "Employed at award winning company, Brandlive. Front-end specialist with a knack for problem solving.";
 	const photographyContent = "14 years of experience, began freelance in 2020. Specialize in portraits.";
