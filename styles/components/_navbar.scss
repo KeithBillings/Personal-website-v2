@@ -2,7 +2,6 @@
 	display: flex;
 	font-size: 1.5rem;
 	padding: 3rem;
-	font-weight: 100;
 
 	@include mobile() {
 		padding: 2rem 1rem;
@@ -11,6 +10,7 @@
 	.logo {
 		pointer-events: none;
 		font-size: 2.2rem;
+		text-shadow: 0 0 5px $black-5;
 
 		@include mobile() {
 			font-size: 0;
@@ -31,6 +31,7 @@
 			padding: 0.4rem;
 			transition: all 0.2s;
 			display: inline-block;
+			text-shadow: 0 0 5px $black-5;
 
 			&:hover {
 				cursor: pointer;

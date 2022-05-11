@@ -13,12 +13,14 @@
 	&__card {
 		margin: auto;
 		padding-bottom: 8.7rem;
+		pointer-events: none;
 	}
 
 	&__title {
 		font-size: 8rem;
 		text-align: center;
-		transition: all .5s;
+		transition: all 0.5s;
+		text-shadow: 0 0 5px $black-5;
 
 		@include mobile() {
 			font-size: 5rem;
@@ -36,7 +38,7 @@
 		&__item {
 			position: absolute;
 			text-align: center;
-
+			text-shadow: 0 0 5px $black-5;
 			transform: translateY(4rem);
 			transition: all 1s;
 			opacity: 0;
