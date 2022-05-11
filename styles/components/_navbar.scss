@@ -64,9 +64,11 @@
 				opacity: 0;
 				overflow: hidden;
 				transition: all 0.3s;
+				pointer-events: none;
 
 				&--active {
 					opacity: 1;
+					pointer-events: unset;
 				}
 			}
 		}
