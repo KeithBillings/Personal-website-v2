@@ -12,6 +12,7 @@
 		pointer-events: none;
 		font-size: 2.2rem;
 		text-shadow: 0 0 5px $black-5;
+		transition: all 0.3s;
 
 		@include mobile() {
 			font-size: 0;
@@ -23,9 +24,9 @@
 		}
 
 		&--mobile-menu-active {
-			// z-index: 3;
-			// color: $black-10;
-			// text-shadow: none;
+			z-index: 3;
+			color: $black-10;
+			text-shadow: none;
 		}
 	}
 
@@ -93,7 +94,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-right: 2rem;
+		margin-right: 2rem;
 
 		@include greaterThanMobile() {
 			opacity: 0;
@@ -105,31 +106,46 @@
 			position: relative;
 			width: 3rem;
 
-			.top-bun {
-				height: 0.1rem;
-				position: relative;
-				background-color: $white-10;
-				transform: translatey(-0.55rem);
-			}
-			.patty {
-				height: 0.1rem;
-				position: relative;
-				background-color: $white-10;
-			}
+			.top-bun,
+			.patty,
 			.bottom-bun {
 				height: 0.1rem;
 				position: relative;
 				background-color: $white-10;
+				transition: all 0.3s;
+			}
+
+			.top-bun {
+				transform: translatey(-0.55rem);
+			}
+			.patty {
+				// yummy
+			}
+			.bottom-bun {
 				transform: translatey(0.55rem);
 			}
 
 			&--active {
+				z-index: 3;
+
+				.top-bun,
+				.bottom-bun {
+					background-color: $black-10;
+				}
+				.top-bun {
+					transform: translatey(1px) rotate(45deg);
+				}
+				.patty {
+					opacity: 0;
+					display: none;
+				}
+				.bottom-bun {
+					transform: rotate(-45deg);
+				}
 			}
 		}
 
 		&__dropdown {
-			display: none;
-
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -139,7 +155,30 @@
 			width: 100vw;
 			z-index: 2;
 
-			&__menu-item {
+			opacity: 0;
+			pointer-events: none;
+			transition: all 0.3s;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			&--active {
+				opacity: 1;
+				pointer-events: unset;
+			}
+
+			&__links {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 2rem;
+
+				&__menu-item {
+					font-size: 3rem;
+				}
 			}
 		}
 	}
