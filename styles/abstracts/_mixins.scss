@@ -1,4 +1,10 @@
-@mixin laptopSm {
+@mixin desktop() {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin laptopSm() {
 	@media screen and (max-width: 1024px) {
 		@content;
 	}
@@ -12,6 +18,12 @@
 
 @mixin mobile() {
 	@media screen and (max-width: 425px) {
+		@content;
+	}
+}
+
+@mixin greaterThanMobile() {
+	@media screen and (min-width: 425px) {
 		@content;
 	}
 }
