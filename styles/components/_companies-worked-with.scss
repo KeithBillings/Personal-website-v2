@@ -1,0 +1,47 @@
+.companies-worked-with {
+	background-color: $offwhite-10;
+	padding: 10rem 12vw;
+	display: grid;
+
+	&__title {
+		color: $black-10;
+		font-size: 3rem;
+		margin-bottom: 5rem;
+	}
+
+	&__logos {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		justify-items: center;
+		align-items: center;
+		-moz-column-gap: 10rem;
+		column-gap: 10rem;
+
+		@include laptopSm() {
+			grid-template-columns: repeat(4, 1fr);
+
+			@include greaterThanTablet() {
+				svg:nth-last-of-type(-n + 2) {
+					grid-column: span 2;
+					width: 50%;
+				}
+			}
+		}
+
+		@include tablet() {
+			grid-template-columns: repeat(3, 1fr);
+
+			@include greaterThanMobile() {
+				svg:last-child {
+					grid-column: span 3;
+					width: 25%;
+				}
+			}
+		}
+
+		@include mobile() {
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 2rem;
+		}
+	}
+}
