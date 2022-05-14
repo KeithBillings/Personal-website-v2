@@ -41,6 +41,7 @@
 
 	&__title {
 		margin-bottom: 2rem;
+		pointer-events: none;
 	}
 
 	&__content {
@@ -56,6 +57,7 @@
 		position: absolute;
 
 		&__body {
+			pointer-events: none;
 		}
 	}
 

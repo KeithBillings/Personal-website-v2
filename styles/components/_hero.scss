@@ -6,7 +6,7 @@
 	align-items: center;
 	position: relative;
 
-	@include mobile() {
+	@include tablet() {
 		height: calc(100vh - 6.6rem);
 	}
 

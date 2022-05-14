@@ -3,7 +3,7 @@
 	font-size: 1.5rem;
 	padding: 3rem;
 
-	@include mobile() {
+	@include tablet() {
 		padding: 2rem 1rem;
 		justify-content: space-between;
 	}
@@ -12,9 +12,8 @@
 		pointer-events: none;
 		font-size: 2.2rem;
 		text-shadow: 0 0 5px $black-5;
-		transition: all 0.3s;
 
-		@include mobile() {
+		@include tablet() {
 			font-size: 0;
 
 			&::after {
@@ -36,7 +35,7 @@
 		gap: 2rem;
 		transition: all 1s;
 
-		@include mobile() {
+		@include tablet() {
 			opacity: 0;
 			pointer-events: none;
 			position: absolute;
@@ -96,7 +95,7 @@
 		justify-content: center;
 		margin-right: 2rem;
 
-		@include greaterThanMobile() {
+		@include greaterThanTablet() {
 			opacity: 0;
 			pointer-events: none;
 			position: absolute;
@@ -164,7 +163,7 @@
 			align-items: center;
 			justify-content: center;
 
-			@include greaterThanMobile() {
+			@include greaterThanTablet() {
 				display: none;
 			}
 
