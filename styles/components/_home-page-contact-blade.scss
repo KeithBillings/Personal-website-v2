@@ -1,0 +1,48 @@
+.home-page-contact-blade {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 10rem 20vw;
+	gap: 10rem;
+	font-size: 1.6rem;
+	background-color: $black-3;
+
+	@include laptopSm() {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	a {
+		transition: all 0.2s;
+
+		&:hover {
+			text-shadow: 0 0 5px $offwhite-10;
+		}
+	}
+
+	strong {
+		font-weight: 300;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		text-shadow: 0 0 5px $black-5;
+
+		h2 {
+			font-size: 3rem;
+			margin-bottom: 3rem;
+		}
+
+		p {
+			margin-bottom: 1.2rem;
+		}
+
+		&__button {
+			transition: all 0.3s;
+			margin-top: 5rem;
+			margin-left: auto;
+			margin-right: 2rem;
+			margin-bottom: 2rem;
+			text-align: right;
+		}
+	}
+}
