@@ -5,6 +5,8 @@
 	height: calc(100vh - 8.6rem);
 	align-items: center;
 	position: relative;
+	-webkit-filter: brightness(1.5);
+	filter: brightness(1.5);
 
 	@include tablet() {
 		height: calc(100vh - 6.6rem);

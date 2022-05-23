@@ -12,6 +12,8 @@
 		pointer-events: none;
 		font-size: 2.2rem;
 		text-shadow: 0 0 5px $black-5;
+		-webkit-filter: brightness(1.5);
+		filter: brightness(1.5);
 
 		@include tablet() {
 			font-size: 0;
